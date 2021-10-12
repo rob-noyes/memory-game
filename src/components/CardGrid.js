@@ -26,9 +26,12 @@ const CardGrid = () => {
       setCurrentScore(currentScore + 1);
     }
     //checks if the current game is a new high score
-    currentScore < highScore
-      ? setHighScore(highScore)
-      : setHighScore(currentScore);
+  };
+
+  const checkHighScore = () => {
+    currentScore > highScore
+      ? setHighScore(currentScore)
+      : setHighScore(highScore);
   };
 
   //function to shuffle numbers based on a sort method
@@ -38,6 +41,7 @@ const CardGrid = () => {
 
   //resets the game
   const handleReset = () => {
+    checkHighScore();
     setUsedNumbers([]);
     setCurrentScore(0);
     shuffleNumbers();
@@ -46,12 +50,12 @@ const CardGrid = () => {
   return (
     //maps through the numbers, listing each as a Card component
     //Also shows scores
-    <div className="flex justify-center flex-col">
-      <div>
-        <h2>{currentScore}</h2>
-        <h2>{highScore}</h2>
+    <div className="flex justify-center flex-col items-center h-full">
+      <div className="flex flex-col items-center text-3xl mx-10 pt-2">
+        <h2>Current Score: {currentScore}</h2>
+        <h2>High Score: {highScore}</h2>
       </div>
-      <div className="flex">
+      <div className="pt-10 grid grid-cols-2 gap-12 max-w-6xl lg:grid-cols-4">
         {numbers.map((i) => {
           return <Card key={i} num={i} onClick={handleClick} />;
         })}
