@@ -31,7 +31,7 @@ const CardGrid = () => {
       : setHighScore(currentScore);
   };
 
-  //function to shuffle nukbers based on a sort method
+  //function to shuffle numbers based on a sort method
   const shuffleNumbers = () => {
     setNumbers(nums.sort(() => Math.random() - 0.5));
   };
@@ -46,15 +46,16 @@ const CardGrid = () => {
   return (
     //maps through the numbers, listing each as a Card component
     //Also shows scores
-    <div>
-      <h2>{currentScore}</h2>
-      <h2>{highScore}</h2>
+    <div className="flex justify-center flex-col">
       <div>
+        <h2>{currentScore}</h2>
+        <h2>{highScore}</h2>
+      </div>
+      <div className="flex">
         {numbers.map((i) => {
           return <Card key={i} num={i} onClick={handleClick} />;
         })}
       </div>
-      {console.log(usedNumbers)}
     </div>
   );
 };
