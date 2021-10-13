@@ -21,7 +21,7 @@
     "test": "craco test",
     "eject": "react-scripts eject"
   },
-  "homepage": "http://rob-noyes.github.io/memory-game",
+  "homepage": "https://rob-noyes.github.io/memory-game/",
   "eslintConfig": {
     "extends": [
       "react-app",
