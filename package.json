@@ -15,10 +15,13 @@
   },
   "scripts": {
     "start": "craco start",
-     "build": "craco build",
-     "test": "craco test",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "craco build",
+    "test": "craco test",
     "eject": "react-scripts eject"
   },
+  "homepage": "http://rob-noyes.github.io/memory-game",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -39,6 +42,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^9.8.8",
+    "gh-pages": "^3.2.3",
     "postcss": "^7.0.39",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.16"
   }
