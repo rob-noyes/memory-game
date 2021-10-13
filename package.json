@@ -12,7 +12,8 @@
     "react-dom": "^17.0.2",
     "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.2"
-  },
+  },  
+  "homepage": "https://rob-noyes.github.io/memory-game/",
   "scripts": {
     "start": "craco start",
     "predeploy": "npm run build",
@@ -21,7 +22,6 @@
     "test": "craco test",
     "eject": "react-scripts eject"
   },
-  "homepage": "https://rob-noyes.github.io/memory-game/",
   "eslintConfig": {
     "extends": [
       "react-app",
