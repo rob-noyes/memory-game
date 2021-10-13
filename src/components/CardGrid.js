@@ -74,7 +74,7 @@ const CardGrid = () => {
         <h2>Current Score: {currentScore}</h2>
         <h2>High Score: {highScore}</h2>
       </div>
-      <div className="pt-10 grid grid-cols-2 gap-12 max-w-6xl lg:grid-cols-4">
+      <div className="pt-10 grid grid-cols-2 gap-6 max-w-6xl lg:max-w-6xl lg:grid-cols-4">
         {character.map((i) => {
           return (
             //maps through the characters, listing each as a Card component
@@ -83,8 +83,6 @@ const CardGrid = () => {
               key={i._id}
               value={i.name}
               name={i.name}
-              race={i.race}
-              gender={i.gender}
               onClick={handleClicker}
             />
           );
