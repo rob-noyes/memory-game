@@ -69,24 +69,26 @@ const CardGrid = () => {
   };
 
   return (
-    <div className="flex justify-center flex-col items-center h-full">
-      <div className="flex flex-col items-center text-3xl mx-10 pt-2">
-        <h2>Current Score: {currentScore}</h2>
-        <h2>High Score: {highScore}</h2>
-      </div>
-      <div className="pt-10 grid grid-cols-2 gap-6 max-w-6xl lg:max-w-6xl lg:grid-cols-4">
-        {character.map((i) => {
-          return (
-            //maps through the characters, listing each as a Card component
-            //Also shows scores
-            <CharacterCard
-              key={i._id}
-              value={i.name}
-              name={i.name}
-              onClick={handleClicker}
-            />
-          );
-        })}
+    <div className="flex flex-col items-center h-full">
+      <div className="lg:px-10 py-5 bg-gray-200 bg-opacity-50 m-1 mt-5 rounded-xl shadow-2xl">
+        <div className="flex flex-col items-center text-3xl mx-10 pt-2">
+          <h2>Current Score: {currentScore}</h2>
+          <h2>High Score: {highScore}</h2>
+        </div>
+        <div className="pt-10 grid grid-cols-2 gap-6 max-w-6xl lg:max-w-6xl lg:grid-cols-4 ">
+          {character.map((i) => {
+            return (
+              //maps through the characters, listing each as a Card component
+              //Also shows scores
+              <CharacterCard
+                key={i._id}
+                value={i.name}
+                name={i.name}
+                onClick={handleClicker}
+              />
+            );
+          })}
+        </div>
       </div>
     </div>
   );

@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         darkblue: '#314859',
       },
+      backgroundImage: {
+        'lotr-main': 'url(components/images/lotr.webp)',
+      },
     },
   },
   variants: {
